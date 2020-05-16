@@ -1,0 +1,36 @@
+// C program to check whether two strings are pallindrome or not without using string functions.
+// Coding Solutions
+// Solution by Sourav Chakraborty
+
+#include <stdio.h>
+int main()
+{
+   char str[50];
+   int start, mid, end, length = 0;
+
+    printf("Enter String :\n");
+   gets(str);
+
+   while ( str[length] != '\0' )
+      length++;
+
+   end = length - 1;
+   mid = length/2;
+
+   for( start = 0 ; start < mid ; start++ )
+   {
+      if ( str[start] != str[end] )
+      {
+         printf("Not a Palindrome\n");
+         break;
+      }
+      end--;
+   }
+   if( start == mid )
+      printf("Palindrome\n");
+
+   return 0;
+}
+
+// MAR_Lockdown
+// Sourav Chakraborty
